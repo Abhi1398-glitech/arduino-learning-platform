@@ -1,0 +1,25 @@
+FROM node:18
+
+# Install dependencies for Arduino CLI
+RUN apt-get update && apt-get install -y curl
+
+# Install Arduino CLI
+RUN curl -fsSL https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh | sh
+
+# Add Arduino CLI to PATH
+ENV PATH="/root/bin:${PATH}"
+
+# Install Arduino AVR core
+RUN arduino-cli core update-index
+RUN arduino-cli core install arduino:avr
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+EXPOSE 3001
+
+CMD ["node", "server.js"]

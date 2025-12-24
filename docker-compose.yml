@@ -1,0 +1,19 @@
+services:
+  backend:
+    build: ./backend
+    ports:
+      - "3001:3001"
+
+  frontend:
+    image: node:18
+    working_dir: /app
+    volumes:
+      - ./arduino-frontend:/app
+    command: npm start
+    environment:
+      - HOST=0.0.0.0
+      - PORT=3000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
