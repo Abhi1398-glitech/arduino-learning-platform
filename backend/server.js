@@ -10,7 +10,7 @@ app.use(express.json());
 
 
 
-const MONGO_URL = "mongodb+srv://youtube:Abhi1398@cluster0.4gg5nap.mongodb.net/?appName=Cluster0";
+const MONGO_URL = "mongodb+srv://database:passwors8@cluster0.4gg5nap.mongodb.net/?appName=Cluster0";
 const client = new MongoClient(MONGO_URL);
 
 //let usersCollection;
