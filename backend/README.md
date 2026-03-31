@@ -1,8 +1,8 @@
-Arduino Online Compiler Platform (Docker + Node + Arduino CLI + MongoDB)
+- Arduino Online Compiler Platform (Docker + Node + Arduino CLI + MongoDB)
 
-A web backend that allows users to submit Arduino code, compile it using Arduino CLI inside Docker, and receive automated test-case feedback — with user authentication and contact storage using MongoDB.
+- A web backend that allows users to submit Arduino code, compile it using Arduino CLI inside Docker, and receive automated test-case feedback — with user authentication and contact storage using MongoDB.
 
-This project simulates an online Arduino IDE / coding practice platform.
+- This project simulates an online Arduino IDE / coding practice platform.
 
 ✨ Features
 🔧 Compile Arduino .ino code using Arduino CLI
@@ -13,14 +13,17 @@ This project simulates an online Arduino IDE / coding practice platform.
 🔐 Basic authentication (Signup/Login)
 📬 Contact form storage
 ⚡ Ready to plug into any frontend (React, Vue, etc.)
+----
 
-🏗 Tech Stack
+- 🏗 Tech Stack
 Node.js + Express
 Arduino CLI
 MongoDB Atlas
 Docker
 CORS + JSON APIs
-📁 Project Structure
+-----
+
+- 📁 Project Structure
 .
 ├── backend/
 │   ├── server.js
@@ -30,14 +33,14 @@ CORS + JSON APIs
 ├── docker-compose.yml
 
 🐳 Docker Setup (Recommended)
-1️⃣ Clone the repository
-git clone https://github.com/your-username/arduino-online-compiler.git
-cd arduino-online-compiler
+- 1️⃣ Clone the repository
+- git clone https://github.com/your-username/arduino-online-compiler.git
+- cd arduino-online-compiler
 
-2️⃣ Run with Docker Compose
-docker-compose up --build
+- 2️⃣ Run with Docker Compose
+- docker-compose up --build
 
-Server will run on:
+- Server will run on:
 
 http://localhost:5000
 ⚙️ How It Works
